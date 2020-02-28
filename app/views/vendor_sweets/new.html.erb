@@ -1,0 +1,19 @@
+<% if flash[:errors] %>
+<% flash[:errors].each do |error| %>
+<h4><%= error %></h4>
+<% end %>
+<% end %>
+
+<%= form_for @vendor_sweet do |f| %>
+
+<%= f.label :vendor_id %>
+<%= f.collection_select(:vendor_id, @vendors, :id, :name) %>
+
+<%= f.label :sweet_id %>
+<%= f.collection_select(:sweet_id, @sweets, :id, :name) %>
+
+<%= f.label :price %>
+<%= f.number_field :price %>
+
+<%= f.submit "Make Association" %>
+<% end %>
