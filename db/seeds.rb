@@ -19,3 +19,9 @@ end
 sweets.each do |sweet|
   Sweet.create(name: sweet)
 end
+
+vs1 = Vendorsweet.create(sweet_id: 1, vendor_id: 1)
+vs2 = Vendorsweet.create(sweet_id: 2, vendor_id: 2)
+vs3 = Vendorsweet.create(sweet_id: 3, vendor_id: 3)
+vs4 = Vendorsweet.create(sweet_id: 4, vendor_id: 4)
+vs5 = Vendorsweet.create(sweet_id: 5, vendor_id: 5)
