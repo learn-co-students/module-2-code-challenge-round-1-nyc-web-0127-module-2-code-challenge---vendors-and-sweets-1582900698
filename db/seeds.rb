@@ -19,3 +19,18 @@ end
 sweets.each do |sweet|
   Sweet.create(name: sweet)
 end
+
+
+VendorSweet.create(vendor_id: 1, sweet_id: 1, price:15)
+VendorSweet.create(vendor_id: 1, sweet_id: 2, price:5)
+VendorSweet.create(vendor_id: 1, sweet_id: 3, price:10)
+VendorSweet.create(vendor_id: 1, sweet_id: 4, price:5)
+VendorSweet.create(vendor_id: 2, sweet_id: 1, price:20)
+VendorSweet.create(vendor_id: 2, sweet_id: 2, price:15)
+VendorSweet.create(vendor_id: 2, sweet_id: 3, price:25)
+VendorSweet.create(vendor_id: 3, sweet_id: 4, price:5)
+VendorSweet.create(vendor_id: 3, sweet_id: 5, price:10)
+VendorSweet.create(vendor_id: 4, sweet_id: 6, price:5)
+VendorSweet.create(vendor_id: 4, sweet_id: 3, price:25)
+VendorSweet.create(vendor_id: 5, sweet_id: 5, price:20)
+VendorSweet.create(vendor_id: 6, sweet_id: 4, price:10)

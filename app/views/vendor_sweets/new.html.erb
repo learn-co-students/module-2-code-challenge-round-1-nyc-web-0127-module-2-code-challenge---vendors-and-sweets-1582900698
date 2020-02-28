@@ -1,0 +1,22 @@
+<h1> Vendor Bought a Sweet Form: </h1>
+
+<p><% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+  <%= error %><br>
+  <% end %>
+<% end %></p>
+
+
+
+<%= form_for @vendor_sweet do |f| %>
+  Select Vendor:  
+  <%= f.collection_select :vendor_id, @vendors, :id, :name %><br>
+
+  Select Sweet:  
+  <%= f.collection_select :sweet_id, @sweets, :id, :name %><br>
+
+  Enter Price: 
+  <%= f.number_field :price %><br>
+
+  <%= f.submit "Submit"%>
+<% end %>
