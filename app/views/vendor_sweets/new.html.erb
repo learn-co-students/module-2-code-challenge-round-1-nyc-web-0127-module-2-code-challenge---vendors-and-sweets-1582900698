@@ -1,0 +1,23 @@
+<h1>Welcome to V-S index page!</h1>
+    <% if @errors %>
+    <% @errors.each do |error| %>
+    <%= error %>
+    <% end %>
+    <% end %>
+
+
+<%= form_for @vendor_sweet do |f| %>
+<%= f.label :vendor_id, "Vendor List: "%>
+<%= f.collection_select(:vendor_id, @vendors, :id, :name ) %>
+<br>
+<br>
+<%= f.label :sweet_id, "Sweets List: "%>
+<%= f.collection_select(:sweet_id, @sweets, :id, :name ) %>
+<br>
+<br>
+<%= f.label :price, "Price please: " %>
+<%= f.text_field :price %>
+<br>
+<br>
+<%= f.submit %>
+<% end %>

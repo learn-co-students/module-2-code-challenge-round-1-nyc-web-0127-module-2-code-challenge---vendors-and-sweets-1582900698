@@ -1,7 +1,18 @@
 <h1>All Vendors</h1>
 
+<h3>
+<label for="average_price">Average price for sweets:</label>
+<%= @price %> 
+</h3>
 <ul>
   <% @vendors.each do |vendor| %>
-    <li><%= vendor.name %></li>
+    <li><%= link_to vendor.name, vendor %><br>
+    <label for="price">Price: </label> 
+    <% if vendor.vendor_sweets.count == 0 %>
+    <%= 0 %>
+    <% else %>
+     <%= average_price_helper(vendor) %>
+     <% end %>
+    </li>
   <% end  %>
 </ul>
