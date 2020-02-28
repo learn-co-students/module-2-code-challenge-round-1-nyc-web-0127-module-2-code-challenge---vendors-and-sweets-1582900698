@@ -1,0 +1,26 @@
+<h1>Create new vendor_sweet</h1>
+<% if flash[:error] %>
+<% flash[:error].each do |mess| %>
+<h3><%= mess %></h3>
+      
+<% end %>
+<% end %>
+
+
+<%= form_for @vendor_sweet do |f| %>
+
+
+<h3> vendor name : <%=  f.label :vendor_id %></h3>
+<h3> <%= f.collection_select :vendor_id, Vendor.all,:id,:name, include_blank: false %> </h3>
+
+<h3> sweet name : <%=  f.label :sweet_id %></h3>
+<h3> <%= f.collection_select :sweet_id, Sweet.all,:id,:name, include_blank: false %> </h3>
+<h3> price: <%=  f.label :price %> </h3>
+<h3> <%=  f.number_field :price %></h3>
+
+
+
+<h3> <%=  f.submit "Create vendor_sweet" %> </h3>
+
+<% end %>
+

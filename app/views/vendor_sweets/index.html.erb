@@ -1,0 +1,8 @@
+<h1>All Vendor_Sweets</h1>
+
+<ul>
+  <% @vendor_sweets.each do |vendor_sweet| %>
+    <li><%= link_to vendor_sweet.vendor_id, vendor_sweet %></li>
+  <% end  %>
+</ul>
+

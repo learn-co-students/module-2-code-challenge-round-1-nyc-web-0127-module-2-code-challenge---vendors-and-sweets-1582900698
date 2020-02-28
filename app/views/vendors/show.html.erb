@@ -1,0 +1,9 @@
+
+<h1>Show page Vendor </h1>
+<h1> <%= @vendor.name %> </h1>
+<h1> sweets sold :  <%= @vendor.sweets.count %> </h1>
+<% @vendor.sweets.each do |sweet| %>
+    <li><%= link_to sweet.name, sweet_path %></li>
+  <% end  %><br>
+
+<%= link_to 'Go back', vendors_path %> 
