@@ -1,0 +1,26 @@
+<% if @vendor_sweet.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@vendor_sweet.errors.count, "error") %>
+      prohibited this post from being saved:
+    </h2>
+ 
+    <ul>
+    <% @vendor_sweet.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @vendor_sweet do |f| %>
+<%= f.label :vendor_id, "Vendor:" %>
+<%= f.collection_select(:vendor_id, @vendors, :id, :name) %>
+<br/>
+<%= f.label :sweet_id, "Sweet:" %>
+<%= f.collection_select(:sweet_id, @sweets, :id, :name) %>
+<br/>
+<%= f.label :price, "Price:" %>
+<%= f.number_field :price %>
+<%= f.submit %>
+<% end %>

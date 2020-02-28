@@ -1,7 +1,9 @@
 <h1>All Vendors</h1>
 
+<h3>Average price of all sweets: <%= number_to_currency(@average_all) %></h3>
+
 <ul>
   <% @vendors.each do |vendor| %>
-    <li><%= vendor.name %></li>
+    <li><%=link_to vendor.name, vendor %> Average Price: <%= number_to_currency(vendor.average_price) %></li>
   <% end  %>
 </ul>
