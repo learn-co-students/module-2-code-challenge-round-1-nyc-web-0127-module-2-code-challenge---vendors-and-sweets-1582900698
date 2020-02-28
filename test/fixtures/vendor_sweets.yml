@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sweet_id: one
+  vendor_id: one
+
+two:
+  sweet_id: two
+  vendor_id: two
