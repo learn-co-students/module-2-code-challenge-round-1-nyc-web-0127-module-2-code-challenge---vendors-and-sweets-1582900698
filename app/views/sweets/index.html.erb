@@ -2,6 +2,7 @@
 
 <ul>
   <% @sweets.each do |sweet| %>
-    <li><%= sweet.name %></li>
+      <div><%= link_to sweet.name, sweet %> </div>
   <% end  %>
 </ul>
+
