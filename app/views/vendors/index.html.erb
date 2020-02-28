@@ -1,5 +1,5 @@
-<h1 style="color: purple">All Vendors</h1>
-<h3 style="color: maroon">Average Price of ALL Sweets: $<%=@average_price_for_all_sweets %></h3>
+<h1 style="color: #7DCEA0">All Vendors</h1>
+<h3 style="color: lightcoral">Average Price of ALL Sweets: $<%=@average_price_for_all_sweets %></h3>
 <ul>
   <% @vendors.each do |vendor| %>
     <li><%= link_to vendor.name, vendor_path(vendor) %> | Average Price of Sweets: $<%= vendor.average_price if vendor.vendor_sweets %></li>
