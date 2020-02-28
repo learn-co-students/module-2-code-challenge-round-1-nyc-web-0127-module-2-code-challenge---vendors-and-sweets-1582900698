@@ -55,7 +55,7 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
-### 1. Create VendorSweet model
+[x]### 1. Create VendorSweet model
 
 Update the schema and models to add the `VendorSweet` model. It should have:
 
@@ -65,7 +65,7 @@ Update the schema and models to add the `VendorSweet` model. It should have:
 
 In the rails console, check that your code works by creating your first `VendorSweet` with a given `Sweet`, `Vendor`, and price.
 
-### 2. VendorSweet Create Form
+[x]### 2. VendorSweet Create Form
 
 A user should be able to visit a page to link a vendor and a sweet. The form should let them:
 
@@ -76,7 +76,7 @@ A user should be able to visit a page to link a vendor and a sweet. The form sho
 
 Once the `VendorSweet` is created, the user should be redirected to the selected vendor's show page.
 
-### 3. Vendor show page
+[x]### 3. Vendor show page
 
 The show page for a Vendor should include:
 
@@ -84,7 +84,7 @@ The show page for a Vendor should include:
 - a list of the Sweets that they sell
 - each Sweet in the list should link to that Sweet's show page
 
-### 4. Sweet Show page
+[x]### 4. Sweet Show page
 
 The Sweet's show page should include:
 
@@ -92,15 +92,15 @@ The Sweet's show page should include:
 - a list of Vendors that sell this Sweet
 - each Vendor in the list should link to that Vendor's show page
 
-### 5. Vendor Index page links
+[x]### 5. Vendor Index page links
 
 On the Vendors index page, we should see a list of vendor's names. Each name should link to the Vendor's show page.
 
-### 6. Sweets index page links
+[x]### 6. Sweets index page links
 
 On the Sweets index page, we should see a list of sweet's names. Each name should link to the Sweet's show page.
 
-### 7. VendorSweet Validations
+[x]### 7. VendorSweet Validations
 
 Add validations to the VendorSweet model so that:
 
@@ -109,13 +109,13 @@ Add validations to the VendorSweet model so that:
 
 Add error handling to the `VendorSweet` create action. If the VendorSweet is *not* valid, the form should show the validation error messages.
 
-### 8. Advanced: VendorSweet Validation
+[x]### 8. Advanced: VendorSweet Validation
 
 There should only be one `VendorSweet` for any pair of `Vendor` and `Sweet`.
 
 Add a validation to ensure that there is only one VendorSweet for a Vendor and Sweet pair. Update your error handling so that this new validation is also displayed to the user.
 
-### 9. Advanced: Vendor Average Price
+[x]### 9. Advanced: Vendor Average Price
 
 On the Vendor index page, show:
 
