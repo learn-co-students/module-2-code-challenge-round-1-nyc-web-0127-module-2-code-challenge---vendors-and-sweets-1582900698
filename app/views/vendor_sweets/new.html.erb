@@ -1,0 +1,13 @@
+<%= flash[:error] %>
+
+<%= form_for @vendorsweet do |f| %>
+
+Vendor: <%= collection_select(:vendor, :id, @vendors, :id, :name) %>
+<br>
+Sweet: <%= collection_select(:sweet, :id, @sweets, :id, :name) %>
+<br>
+<%= f.label :price, "Price" %>
+<%= f.number_field (:price) %>
+
+<%= f.submit %>
+<% end %>
