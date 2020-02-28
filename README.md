@@ -87,7 +87,6 @@ The show page for a Vendor should include:
 ### 4. Sweet Show page
 
 The Sweet's show page should include:
-
 - the Sweet's name
 - a list of Vendors that sell this Sweet
 - each Vendor in the list should link to that Vendor's show page

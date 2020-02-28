@@ -1,0 +1,13 @@
+<%if flash[:errors]%>
+<% flash[:errors].each do |error|%>
+<%= error %>
+<%end%>
+<%end%>
+
+<h2> Create a VendorSweet...whatever that is :)</h2>
+<%= form_for @vendor_sweet do |f| %>
+<p> Sweets:<%= f.collection_select(:sweet_id, @sweet, :id, :name) %>
+<p> Vendors:<%= f.collection_select(:vendor_id, @vendor, :id, :name) %>
+<p> Price:<%= f.number_field :price %>
+<%= f.submit %>
+<% end %>
