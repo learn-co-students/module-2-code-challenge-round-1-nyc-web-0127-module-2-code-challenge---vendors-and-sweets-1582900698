@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   resources :vendors
   resources :sweets
-  resources :vendor_sweets
+  resources :vendor_sweets, only: [:new, :create]
 end
