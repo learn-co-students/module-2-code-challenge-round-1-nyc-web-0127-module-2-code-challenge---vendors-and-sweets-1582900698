@@ -2,6 +2,8 @@
 
 <ul>
   <% @vendors.each do |vendor| %>
-    <li><%= vendor.name %></li>
+    <li><%= link_to vendor.name, vendor_path(vendor.id) %></li>
   <% end  %>
 </ul>
+
+<h5><%= link_to  "Assign a Vendor a Sweet", new_vendor_sweet_path %></h5>
