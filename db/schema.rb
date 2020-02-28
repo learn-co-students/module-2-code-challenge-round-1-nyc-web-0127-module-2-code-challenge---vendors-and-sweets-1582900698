@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200228144649) do
+ActiveRecord::Schema.define(version: 20200228154609) do
 
   create_table "sweets", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20200228144649) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "vendor_sweet_id"
     t.index ["sweet_id"], name: "index_vendor_sweets_on_sweet_id"
     t.index ["vendor_id"], name: "index_vendor_sweets_on_vendor_id"
   end
