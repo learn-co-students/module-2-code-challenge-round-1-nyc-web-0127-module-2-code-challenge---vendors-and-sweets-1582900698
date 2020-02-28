@@ -1,7 +1,23 @@
-<h1>All Vendors</h1>
+<h1>Vendor Index Page</h1>
+
+<h3>Average Sweet Prices:</h3>
+
+<% @sweets.each do |sweet| %>
+  <%= sweet.name %> - <%= sweet.sweet_average_price %> cents<br>
+<% end %>
+
+<h3>Vendors:</h3>
 
 <ul>
   <% @vendors.each do |vendor| %>
-    <li><%= vendor.name %></li>
+    <li><%= link_to vendor.name, vendor %>
+      <% if vendor.vendor_average_price %>
+        - <%= vendor.vendor_average_price %> cents<br>
+      <% else %>
+       - Vendor has not bought any sweets
+      <% end %>
+    </li>
   <% end  %>
 </ul>
+
+

@@ -1,0 +1,14 @@
+<h1>Create Vendor/Sweet Pair</h1>
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <%= error %><br>
+    <% end %>
+<% end %>
+
+<%= form_for @vendor_sweet do |f| %>
+    <p>Vendor Name: <%= f.collection_select :vendor_id, Vendor.all, :id, :name %></p>
+    <p>Sweet Name: <%= f.collection_select :sweet_id, Sweet.all, :id, :name %></p>
+    <p>Price: <%= f.number_field :price %></p>
+    <%= f.submit "Create Pair"%>
+<% end %>

@@ -19,3 +19,10 @@ end
 sweets.each do |sweet|
   Sweet.create(name: sweet)
 end
+
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: rand(1..99))
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: rand(1..99))
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: rand(1..99))
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: rand(1..99))
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: rand(1..99))
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: rand(1..99))
