@@ -1,0 +1,16 @@
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+  <% end %>
+
+<%= form_for @vendor_sweet do |f| %>
+     <%=f.label :vendor_id %>
+     <%= collection_select(:vendor_sweet, :vendor_id, @vendors, :id, :name) %><br>
+     <%=f.label :sweet_id %>
+     <%= collection_select(:vendor_sweet, :sweet_id, @sweets, :id, :name) %><br>
+     <%=f.label :price %>
+     <%= f.number_field :price %><br>
+
+     <%= f.submit %> 
+<% end %>
