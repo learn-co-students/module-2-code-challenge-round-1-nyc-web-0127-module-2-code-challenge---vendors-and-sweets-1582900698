@@ -8,6 +8,7 @@ end
 
 
 ####Couldn't get strong params to work on uniqueness validation so resorted to below
+
 # def create
 #     @vendor_sweet = VendorSweet.new(vendor_sweet_params)
 #     if @vendor_sweet.save
@@ -36,7 +37,7 @@ def vendor_sweet_params
     params.require(:vendor_sweet).permit(:vendor_id, :sweet_id, :price,)
 end
 
-####Couldn't get this to work so stopped using strong params on association uniqueness validation
+####Couldn't get this to work so stopped using strong params on association uniqueness validation, probably could do it with hidden fields on the form, but didn't have time to figure that out.
 
 # def vendor_sweet_params
 #     params.require(:vendor_sweet).permit(:vendor_id, :sweet_id, :price, vendor_sweet_id: (:vendor_id.to_s + :sweet_id.to_s))
