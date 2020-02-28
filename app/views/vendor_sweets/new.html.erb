@@ -1,0 +1,7 @@
+<h1>VendorSweet#new</h1>
+
+<%= form_for @vendor_sweet do |vs| %>
+<%= vs.collection_select(:vendor_id, @vendors, :id, :name) %>
+<%= vs.collection_select(:sweet_id, @sweets, :id, :name) %>
+ <%= vs.submit%>
+<%end%>
