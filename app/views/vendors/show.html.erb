@@ -1,0 +1,12 @@
+<h1>All Vendors Show Page</h1>
+
+<h3><%= @vendor %></h3>
+
+
+
+
+<% @vendor.sweets.each do |vendor| %>
+<p><%= vendor.name %></p>
+<% end %>
+
+
