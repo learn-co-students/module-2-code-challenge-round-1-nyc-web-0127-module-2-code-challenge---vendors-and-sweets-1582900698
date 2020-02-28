@@ -8,6 +8,7 @@
 
 Vendor.destroy_all
 Sweet.destroy_all
+VendorSweet.destroy_all
 
 vendors = ["Insomnia Cookies", "Cookies Cream","Carvel","Gregory's Coffee","Duane Park Patisserie","Tribeca Treats"]
 sweets = ["Chocolate Chip Cookie", "Chocolate Chunk Cookie","M&Ms Cookie","White Chocolate Cookie","Brownie","Peanut Butter Icecream Cake", ]
@@ -19,3 +20,14 @@ end
 sweets.each do |sweet|
   Sweet.create(name: sweet)
 end
+
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: 0.50)
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: 0.75)
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: 1.50)
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: 1.00)
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: 1.25)
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: 2.50)
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: 3.50)
+VendorSweet.create(vendor_id: Vendor.all.sample.id, sweet_id: Sweet.all.sample.id, price: 4.50)
+
+

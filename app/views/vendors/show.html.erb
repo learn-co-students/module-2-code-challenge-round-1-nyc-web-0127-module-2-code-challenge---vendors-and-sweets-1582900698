@@ -1,0 +1,9 @@
+<h1 style="color: magenta"><%= @vendor.name %></h1>
+
+<h3 style="color: orange">SWEETS BY THIS VENDOR:</h3>
+<% @vendor.sweets.each do |sweet| %>
+<li><%= link_to sweet.name, sweet_path(sweet) %></li>
+<% end %><br>
+
+<h5><%= button_to "CREATE NEW SWEET FOR A VENDOR", new_vendor_sweet_path, method: :get %></h5>
+
