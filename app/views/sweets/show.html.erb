@@ -1,6 +1,6 @@
-<h1 style="color: green"><%= @sweet.name %></h1>
+<h1 style="color: #B07889"><%= @sweet.name %></h1>
 
-<h3 style="color: blue">Vendors Who Make This Candy:</h3>
+<h3 style="color: #558BDB">Vendors Who Make This Candy:</h3>
 <% @sweet.vendors.each do |vendor| %>
 <li><%= link_to vendor.name, vendor_path(vendor) %></li>
 <% end %>
